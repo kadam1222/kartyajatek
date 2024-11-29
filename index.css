@@ -8,19 +8,19 @@ body {
     background-color: #426bb6;
 }
 
-.jatekter {
+#jatekter {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
 }
 
-.card{
+.kartya{
     width: 100px;
     height: 150px;
     perspective: 1000px;
 }
 
-.card-hover {
+.kartya-belso {
     width: 100%;
     height: 100%;
     position: relative;
@@ -29,11 +29,11 @@ body {
     cursor: pointer;
 }
 
-.card-hover.flipped {
+.kartya-belso.flipped {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.kartya-elolap, .kartya-hatulap {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,11 +46,11 @@ body {
     border-radius: 20px;
 }
 
-.card-back {
+.kartya-hatulap {
     background-color: green;
 }
 
-.card-front {
+.kartya-elolap {
     background-color: white;
     transform: rotateY(180deg);
 }
