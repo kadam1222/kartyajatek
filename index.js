@@ -3,7 +3,7 @@ let szamom = 0;
 let szo1 = "";
 let szo2 = "";
 let id1, id2;
-
+let vege = 0;
 let fodiv = document.getElementById("jatekter");
 
 for (let i = 1; i <= 8; i++) {
@@ -44,8 +44,14 @@ for (let i = 1; i <= 8; i++) {
             if (szo1 == szo2) {
                 id1.classList.add('disabled');
                 id2.classList.add('disabled');
-                szamom = 0; 
-                
+                szamom = 0;
+                vege++ 
+                if(vege==4){
+                    setTimeout( function() {
+                        alert("Nyertél!")
+                    }, 1000);
+                    
+                }
             } else {
                 
                 setTimeout(function () {
@@ -55,12 +61,14 @@ for (let i = 1; i <= 8; i++) {
                 szamom = 0; 
             }
         }
+       
     });
 
     fodiv.appendChild(kártya);
     kártya.appendChild(kártya_belso);
     kártya_belso.appendChild(kártya_elolap);
     kártya_belso.appendChild(kártya_hatulap);
+    
 }
 
 function fordit(kártya) {
