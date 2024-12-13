@@ -35,11 +35,14 @@ for (let i = 1; i <= 8; i++) {
         if (szamom == 1) {
             szo1 = this.querySelector('.kartya-elolap').innerText; 
             id1 = this; 
+            id1.classList.add('disabled')
+
         }
 
         if (szamom == 2) {
             szo2 = this.querySelector('.kartya-elolap').innerText; 
             id2 = this; 
+            id1.classList.remove('disabled')
             
             if (szo1 == szo2) {
                 id1.classList.add('disabled');
@@ -49,7 +52,7 @@ for (let i = 1; i <= 8; i++) {
                 if(vege==4){
                     setTimeout( function() {
                         alert("Nyertél!")
-                    }, 1000);
+                    }, 500);
                     
                 }
             } else {
